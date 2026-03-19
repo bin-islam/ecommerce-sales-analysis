@@ -6,12 +6,17 @@ Covers revenue trends, product performance, geographic breakdown, and RFM custom
 ## Dataset
 - Source: [UCI Online Retail Dataset](https://www.kaggle.com/datasets/carrie1/ecommerce-data) via Kaggle
 - 541,909 transactions | Dec 2010 to Dec 2011 | 37 countries
-- Cleaned to 397,884 rows after removing cancellations, nulls, and invalid entries
+- Original: 541,909 transactions | Cleaned: 397,884 rows after removing cancellations, nulls, and invalid entries
 
 ## Tools
 - Python (Pandas, Matplotlib, Seaborn)
 - SQL (SQLite)
 - Jupyter Notebook
+
+## Usage
+
+1. Run `notebooks/01_eda_cleaning.ipynb` first - this loads the raw data, performs cleaning, and saves `data_cleaned.csv`
+2. Run `notebooks/02_analysis.ipynb` - this loads the pre-cleaned data and performs all analyses
 
 ## Analyses
 
@@ -47,9 +52,10 @@ Key finding: Champions are 14% of customers but generate 51% of total revenue.
 ```
 ecommerce-sales-analysis/
 ├── data/
-│   └── data.csv
+│   ├── data.csv          # Original raw data (541,909 rows)
+│   └── data_cleaned.csv  # Cleaned data (397,884 rows)
 ├── notebooks/
-│   └── 01_eda_cleaning.ipynb
+│   ├── 01_eda_cleaning.ipynb
 │   └── 02_analysis.ipynb
 ├── sql/
 │   └── queries.sql
